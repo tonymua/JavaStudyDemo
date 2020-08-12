@@ -22,7 +22,7 @@ public class RedisDemo {
         jedisPoolConfig.setMaxWaitMillis(3000);
         jedisPoolConfig.setTestOnBorrow(true);
         jedisPoolConfig.setTestOnReturn(true);*/
-        JedisShardInfo jedisShardInfo = new JedisShardInfo("120.79.213.127", 6379);
+        JedisShardInfo jedisShardInfo = new JedisShardInfo("XXXXX", 6379);
         jedisShardInfo.setPassword("547717253");
         List<JedisShardInfo> list = new LinkedList<JedisShardInfo>();
         list.add(jedisShardInfo);
