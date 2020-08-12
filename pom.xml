@@ -23,7 +23,6 @@
         <module>kafka_demo</module>
         <module>springboot_kafka</module>
         <module>aerospike_demo</module>
-        <module>SpringSecurity_JWT</module>
         <module>java_8</module>
         <module>springboot_aerospike</module>
     </modules>
