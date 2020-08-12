@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.demo.mapper.RoleMapper">
+    <resultMap id="BaseResultMap" type="com.example.demo.pojo.Role">
+        <constructor>
+            <arg column="id" jdbcType="INTEGER" javaType="java.lang.Integer"/>
+            <arg column="name" jdbcType="VARCHAR" javaType="java.lang.String"/>
+        </constructor>
+    </resultMap>
+    <resultMap id="RoleMap" type="com.example.demo.pojo.Role">
+        <id property="id" column="id"></id>
+        <result property="name" column="name"></result>
+        <collection property="users" ofType="com.example.demo.pojo.User">
+            <result property="username" column="username"></result>
+            <result property="password" column="password"></result>
+        </collection>
+    </resultMap>
+    <insert id="insert" parameterType="com.example.demo.pojo.Role">
+    insert into role (id, name)
+    values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR})
+  </insert>
+    <insert id="insertSelective" parameterType="com.example.demo.pojo.Role">
+        insert into role
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="name != null">
+                name,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null">
+                #{id,jdbcType=INTEGER},
+            </if>
+            <if test="name != null">
+                #{name,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+    <select id="selectAll" resultMap="RoleMap">
+        SELECT r.*, u.username, u.password
+        FROM role r
+	        LEFT JOIN user_role ur ON r.id = ur.role_id
+	        LEFT JOIN user u ON ur.user_id = u.id;
+    </select>
+    <select id="queryRole" resultType="java.lang.String">
+        SELECT name
+        FROM role
+        WHERE id = #{roleId}
+    </select>
+</mapper>

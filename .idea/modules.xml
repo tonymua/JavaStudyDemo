@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Multithreading/Multithreading.iml" filepath="$PROJECT_DIR$/Multithreading/Multithreading.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aerospike_demo/aerospike_demo.iml" filepath="$PROJECT_DIR$/aerospike_demo/aerospike_demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dynamic_compile/dynamic_compile.iml" filepath="$PROJECT_DIR$/dynamic_compile/dynamic_compile.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java_8/java_8.iml" filepath="$PROJECT_DIR$/java_8/java_8.iml" />
+      <module fileurl="file://$PROJECT_DIR$/kafka_demo/kafka_demo.iml" filepath="$PROJECT_DIR$/kafka_demo/kafka_demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/redis_demo/redis_demo.iml" filepath="$PROJECT_DIR$/redis_demo/redis_demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring_aop/spring_aop.iml" filepath="$PROJECT_DIR$/spring_aop/spring_aop.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot_aerospike/springboot_aerospike.iml" filepath="$PROJECT_DIR$/springboot_aerospike/springboot_aerospike.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springboot_kafka/springboot_kafka.iml" filepath="$PROJECT_DIR$/springboot_kafka/springboot_kafka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/study_demo.iml" filepath="$PROJECT_DIR$/study_demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tkMapper/tkMapper.iml" filepath="$PROJECT_DIR$/tkMapper/tkMapper.iml" />
+    </modules>
+  </component>
+</project>

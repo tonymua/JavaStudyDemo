@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521:orcl
+#    ITEST:用户名
+    username: ITEST
+    password: 547717253
+    driver-class-name: oracle.jdbc.OracleDriver
+
+pagehelper:
+  helper-dialect: oracle
+
+mybatis:
+  type-aliases-package: com.example.demo.pojo
+  mapper-locations: classpath:com/example/demo/mapper/*.xml

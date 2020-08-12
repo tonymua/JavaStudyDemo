@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    driverClassName: com.ibm.db2.jcc.DB2Driver
+    url: jdbc:db2://localhost:50000/SAMPLE:currentSchema=DEMO;driverType=4;
+#    SAMPLE:Database名字  Demo:schema名字
+    username: db2inst1
+    password: 547717253
+pagehelper:
+  helper-dialect: db2
+mybatis:
+  type-aliases-package: com.example.demo.pojo
+  mapper-locations: classpath:com/example/demo/mapper/*.xml
