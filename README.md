@@ -7,4 +7,5 @@
 - spring_aop : Aop(面向切面编程)demo，利用Aop技术实现简单的权限认证、日志、方法耗时等功能。
 - springboot_kafka : SpringBoot整合Kafka
 - tkMapper : SpringBoot整合tkMapper
+- redis_demo : Redis Java客户端
 - [ ] springboot_aerospike : SpringBoot整合Aerospike
