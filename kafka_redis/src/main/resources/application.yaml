@@ -1,0 +1,41 @@
+
+spring:
+  kafka:
+    bootstrap-servers: XXXXXXXX:9092
+    #生产者
+    # 写入失败时，重试次数。当leader节点失效，一个repli节点会替代成为leader节点，此时可能出现写入失败，
+    # 当retris为0时，produce不会重复。retirs重发，此时repli节点完全成为leader节点，不会产生消息丢失。
+    producer:
+      retries: 0
+      # 每次批量发送消息的数量,produce积累到一定数据，一次发送
+      batch-size: 16384
+      # produce积累数据一次发送，缓存大小达到buffer.memory就发送数据
+      buffer-memory: 33554432
+      acks: all
+      # 指定消息key和消息体的编解码方式
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+    #消费者
+    consumer:
+      # 指定默认消费者group id --> 由于在kafka中，同一组中的consumer不会读取到同一个消息，依靠groud.id设置组名
+      group-id: 1
+      auto-offset-reset: earliest
+      #设置自动提交offset
+      #如果'enable.auto.commit'为true，则消费者偏移自动提交给Kafka的频率（以毫秒为单位），默认值为5000。
+      enable-auto-commit: true
+      auto-commit-interval: 100
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+
+  redis:
+    host: XXXXXX
+    port: 6379
+    database: 0
+    password: 547717253
+    timeout: 6000
+    #连接池最大连接数（使用负值表示没有限制）
+    jedis:
+      pool:
+        max-active: 20
+server:
+  port: 8081
