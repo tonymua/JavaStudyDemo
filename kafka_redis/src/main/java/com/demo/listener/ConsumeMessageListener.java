@@ -1,6 +1,7 @@
 package com.demo.listener;
 
 import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
 
@@ -9,6 +10,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.annotation.KafkaListener;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
@@ -46,7 +48,7 @@ public class ConsumeMessageListener {
             //do something
             System.out.println("接收消息成功");
             System.out.println("业务代码");
-            logger.info("topic is {}, offset is {}, value is {}", record.topic(), record.offset(), record.value());
+            logger.info("topic is {}, offset is {}, value is {},Thread is {}", record.topic(), record.offset(), record.value(),Thread.currentThread().getName());
         }
 
     }

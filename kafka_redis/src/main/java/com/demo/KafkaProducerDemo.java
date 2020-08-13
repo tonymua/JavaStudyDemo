@@ -1,8 +1,6 @@
 package com.demo;
 
-import org.apache.kafka.clients.producer.KafkaProducer;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.scheduling.annotation.EnableAsync;
@@ -18,6 +16,6 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @EnableAsync
 public class KafkaProducerDemo {
     public static void main(String[] args) {
-        SpringApplication.run(KafkaProducerDemo.class,args);
+        SpringApplication.run(KafkaProducerDemo.class, args);
     }
 }

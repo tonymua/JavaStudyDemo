@@ -22,7 +22,7 @@ public class SendMessage {
     @Async
     public void sendMessage1(){
         for (int i = 0; i < 10; i++) {
-            kafkaTemplate.send("test1", "第" + i + "条message111,请注意接收"+Thread.currentThread().getName());
+            kafkaTemplate.send("test1", "第" + i + "条message111,请注意接收"+"线程名："+Thread.currentThread().getName());
         }
         System.out.println("发送messageTest111消息成功！");
     }
@@ -31,7 +31,7 @@ public class SendMessage {
     @Async
     public void sendMessage2(){
         for (int i = 0; i < 20; i++) {
-            kafkaTemplate.send("test2", "第" + i + "条messag222,请注意接收"+Thread.currentThread().getName());
+            kafkaTemplate.send("test2", "第" + i + "条messag222,请注意接收"+"线程名："+Thread.currentThread().getName());
         }
         System.out.println("发送messageTest222消息成功！");
     }
@@ -40,7 +40,7 @@ public class SendMessage {
     @Async
     public void sendMessge3() {
         for (int i = 0; i < 10; i++) {
-            kafkaTemplate.send("test3", "第" + i + "条message333,请注意接收"+Thread.currentThread().getName());
+            kafkaTemplate.send("test3", "第" + i + "条message333,请注意接收"+"线程名："+Thread.currentThread().getName());
         }
         System.out.println("发送messageTest333消息成功！");
     }

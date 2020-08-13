@@ -9,4 +9,3 @@
 - tkMapper : SpringBoot整合tkMapper
 - redis_demo : Redis Java客户端
 - kafka_redis : SpringBoot整合Kafka、Redis(Redis作为计数器监控接收到的消息数量)
-- [ ] springboot_aerospike : SpringBoot整合Aerospike

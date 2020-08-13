@@ -24,7 +24,6 @@
         <module>springboot_kafka</module>
         <module>aerospike_demo</module>
         <module>java_8</module>
-        <module>springboot_aerospike</module>
         <module>kafka_redis</module>
     </modules>
 
