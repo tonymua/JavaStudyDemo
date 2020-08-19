@@ -20,7 +20,6 @@ public class RedisUtil {
 
     /**
      * 指定缓存失效时间
-     *
      * @param key  键
      * @param time 时间(秒)
      * @return
