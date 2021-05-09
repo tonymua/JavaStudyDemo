@@ -1,0 +1,6 @@
+server:
+  port: 8080
+spring:
+  redis:
+    host: xxxxxx
+    port: 9736
