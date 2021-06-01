@@ -46,4 +46,21 @@ public class Stack {
             stackTop = stackTop.nextNode;
         }
     }
+
+    /**
+     *
+     * @param stack
+     * @return
+     */
+    public static Object popStack(Stack stack) {
+        // 栈不为空才可以出栈
+        if (stack.stackTop != stack.stackBottom) {
+            //栈顶元素
+            Node topNode = stack.stackTop;
+            //栈顶指针指向下一个节点
+            stack.stackTop = topNode.nextNode;
+            return topNode;
+        }
+        return null;
+    }
 }
